@@ -5,7 +5,7 @@ import styles from '@/styles/Home.module.css';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Headline(props:any) {
+export function Headline(props:any) {
     return (
         <>
             <p>
