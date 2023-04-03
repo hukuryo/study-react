@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import {Links} from '@/components/Links'
 import {Headline} from '@/components/Headline'
+import { Title } from '@/components/Title'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export  function About() {
+export default function About() {
   return (
     <>
       <Head>
@@ -20,23 +20,7 @@ export  function About() {
       <main className={styles.main}>
         <div className={styles.description}>
           <Headline title = "about Pages"/>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
+          <Title />
         </div>
 
         <Links />
