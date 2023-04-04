@@ -11,7 +11,7 @@ return (
     <>
     <main className={styles.main}>
         <div className={styles.description}>
-        <Headline title="index Pages" >
+        <Headline>
         </Headline>
         <Title />
         </div>

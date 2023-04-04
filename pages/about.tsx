@@ -4,6 +4,7 @@ import styles from '@/styles/Home.module.css'
 import {Links} from '@/components/Links'
 import {Headline} from '@/components/Headline'
 import { Title } from '@/components/Title'
+import { Main } from '@/components/Main'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,14 +18,15 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
       <main className={styles.main}>
         <div className={styles.description}>
-          <Headline title = "about Pages"/>
-          <Title />
+        <Headline title="about page">
+        </Headline>
+        <Title />
         </div>
-
         <Links />
-      </main>
+    </main>
     </>
   )
 }
