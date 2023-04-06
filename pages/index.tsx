@@ -4,6 +4,7 @@ import { Headline } from '@/components/Headline'
 import styles from '@/styles/Home.module.css'
 import { Links } from '@/components/Links'
 import { Title } from '@/components/Title'
+import { Header } from '@/components/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,9 +17,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      
+      <Header />
       <main className={styles.main}>
         <div className={styles.description}>
+        
         <Headline title="index page"/>
         <Title />
         </div>
