@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Inter } from 'next/font/google';
 import styles from './Headline.module.css';
 

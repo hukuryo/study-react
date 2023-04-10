@@ -5,7 +5,7 @@ import styles from '@/src/styles/Home.module.css';
 import { Links } from '@/src/components/Links/Links';
 import { Title } from '@/src/components/Title/Title';
 import { Header } from '@/src/components/Header/Header';
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +18,13 @@ export default function Home() {
     e.preventDefault();
     alert(foo);
   }, []);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = "lightblue";
+    return() => {
+        document.body.style.backgroundColor = "";
+    }
+}, []);
 
   return (
     <>
