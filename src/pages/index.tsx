@@ -5,17 +5,19 @@ import styles from '@/src/styles/Home.module.css';
 import { Links } from '@/src/components/Links/Links';
 import { Title } from '@/src/components/Title/Title';
 import { Header } from '@/src/components/Header/Header';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Home() {
-  const [foo, setFoo] = useState(1);
-  
-  const handleClick = (e:any) => {
-    setFoo((foo) => foo + 1);
-  };
+  const [count, setFoo] = useState(1);
+
+  const handleClick = useCallback (() => {
+    if(count < 10){
+      setFoo((count) => count + 1);
+    }
+  }, [count]);
 
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
@@ -30,7 +32,7 @@ export default function Home() {
         <title>Index Page</title>
       </Head>
       <Header />
-      <h1>{foo}</h1>
+      <h1>{count}</h1>
       <button onClick={handleClick}>
         ボタン
       </button>
